@@ -5,8 +5,8 @@ import boto3
 # s3 = boto3.resource(
 #     service_name='s3',
 #     region_name='us-east-1',
-#     aws_access_key_id='ASIAVPXDYLQ2VOI47DSR',
-#     aws_secret_access_key='x+0dF6FLVobrILAWRUbAWrdEExveuzVj6CccmSbr'
+#     aws_access_key_id='ID',
+#     aws_secret_access_key='KEY'
 # )
 
 # for bucket in s3.buckets.all():
