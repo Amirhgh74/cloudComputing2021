@@ -1,10 +1,14 @@
 import requests
 import json
 import time
+import os,sys
 
-TARGET_T2_URL = "http://34.193.180.212:5000/"
-TARGET_M4_URL = "http://34.193.180.212:8000/"
-TARGET_ALL_URL = "http://34.193.180.212/"
+
+sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 1) # line buffering to avoid terminal hang
+
+TARGET_T2_URL = "http://52.4.16.234/"
+TARGET_M4_URL = "http://3.215.104.93/"
+TARGET_ALL_URL = "http://3.212.147.131/"
 
 
 def send_request_sync(url, count):
@@ -14,9 +18,10 @@ def send_request_sync(url, count):
 
         r = requests.get(url= url)
         response_code  = r.status_code
-        response = r.json()
-        print(response)
-        print(response_code)
+        response = r.text
+        if (response_code == 200):
+        	message = " | Successful Request"
+        print(response + message)
         index += 1
 
     return 
@@ -29,26 +34,33 @@ def run_senario(name):
     if name == "T2":
         url = TARGET_T2_URL
     elif name == "M4":
-        url ==  TARGET_M4_URL
+        url = TARGET_M4_URL
 
-    print("initiate 1000 request to the " + name +  " target cluster...")
+    print("Initiating 1000 requests to " + name +  " cluster ...")
+    print("------------------------------------------------------------\n")
     send_request_sync(url, 1000)
-
-    print("initiate 500 request to the "  + name +  " target cluster...")
+    print("------------------------------------------------------------\n")
+    print("Initiating 500 requests to "  + name +  " cluster ...")
+    print("------------------------------------------------------------\n")
     send_request_sync(url, 500)
-
-    print("sleep for one minute...")
+    print("------------------------------------------------------------\n")
+    print("\n---Sleeping for one minute ...\n")
     time.sleep(60)
 
-    print ("initiate 1000 request to the " + name +  " target cluster")
+    print ("Initiating 500 requests to " + name +  " cluster ...")
+    print("------------------------------------------------------------\n")
     send_request_sync(url, 1000)
-
+    print("------------------------------------------------------------\n\n")
     return
 
 
 def main():
-    print("starting test senarios...\n\n")
+    print("Starting ELB test senarios...\n\n")
+    print("T2 Cluster Test")
+    print("---------------------------\n")
     run_senario("T2")
+    print("M4 Cluster Test")
+    print("---------------------------\n")
     run_senario("M4")
     return 
 
