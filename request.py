@@ -15,6 +15,7 @@ def send_request_sync(url, count):
 
     index = 0
     while index < count:
+        message = " | Unsuccessful Request"
 
         r = requests.get(url= url)
         response_code  = r.status_code
