@@ -19,6 +19,19 @@ ConsumedLCUs_json = '{\
     "title": "All resources - ConsumedLCUs",\
     "region": "us-east-1"\
 }'
+RequestCountPerTarget_json = '{\
+    "metrics": [\
+        [ "AWS/ApplicationELB", "RequestCountPerTarget", "LoadBalancer", "app/ELB-M4-Cluster/36b97285aae53f1f",  "TargetGroup" , "targetgroup/M4-Cluster/144c46b0855b89d3" ,{ "stat": "Sum", "id": "m0" } ]\
+    ],\
+    "legend": {\
+        "position": "bottom"\
+    },\
+    "period": 300,\
+    "view": "timeSeries",\
+    "stacked": false,\
+    "title": "M4-Cluster - RequestCountPerTarget",\
+    "region": "us-east-1"\
+}'
 
 def initialize_client():
     client = boto3.client(
@@ -33,8 +46,8 @@ def request_metric(client):
     response = client.get_metric_statistics(
         Namespace='AWS/ApplicationELB',
         Period=300,
-        StartTime=datetime.utcnow() - timedelta(days=5),
-        EndTime=datetime.utcnow() - timedelta(days=1),
+        StartTime=datetime.utcnow() - timedelta(hours=3),
+        EndTime=datetime.utcnow(),
         MetricName='ConsumedLCUs',
         Statistics=['Maximum'],
         Dimensions=[
@@ -54,15 +67,15 @@ def main():
     client = initialize_client()
     response = request_metric(client)
     ## Print output as log file
-    #pprint(response['Datapoints']) 
+    pprint(response['Datapoints']) 
     
     ## Print metric number only
-    for item in response['Datapoints']:
-    	print (item['Maximum'])
+    # for item in response['Datapoints']:
+    # 	print (item['Maximum'])
     
     ## Save the Graph 
-    response = client.get_metric_widget_image(MetricWidget=ConsumedLCUs_json)
-    with open ('ConsumedLUs.png', 'wb') as f:
+    response = client.get_metric_widget_image(MetricWidget=RequestCountPerTarget_json)
+    with open ('ReuqestPer.png', 'wb') as f:
     	f.write(response["MetricWidgetImage"])
     
     
