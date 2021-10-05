@@ -4,6 +4,9 @@ import boto3
 from pprint import pprint
 from datetime import datetime
 from datetime import timedelta
+import pandas as pd
+import matplotlib.pyplot as plt
+
 
 
 ConsumedLCUs_json = '{\
@@ -54,12 +57,17 @@ def main():
     client = initialize_client()
     response = request_metric(client)
     ## Print output as log file
-    #pprint(response['Datapoints']) 
+    pprint(response['Datapoints']) 
     
     ## Print metric number only
-    for item in response['Datapoints']:
-    	print (item['Maximum'])
+    datapoint = [x['Maximum'] for x in response['Datapoints']]
+    timestamp = [y['Timestamp'] for y in response['Datapoints']]
+    df = pd.DataFrame({'timestamp':timestamp, 'datapoint':datapoint})
     
+    df['datapoint']  = [pd.to_numeric(i) for i in df['datapoint']]
+    print(df.sort_values(by='datapoint'))
+    plt.plot(datapoint)
+    plt.show()
     ## Save the Graph 
     response = client.get_metric_widget_image(MetricWidget=ConsumedLCUs_json)
     with open ('ConsumedLUs.png', 'wb') as f:
