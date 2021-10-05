@@ -1,0 +1,27 @@
+{
+	"MetricDataQueries": [{
+		"Id": "m1",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "HTTPCode_ELB_503_Count",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/ELB-M4-Cluster/36b97285aae53f1f"
+					},
+					{
+						"Name": "AvailabilityZone",
+						"Value": "us-east-1d"
+					}
+
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	}],
+	"StartTime": "2021-10-04t13:30:0000",
+	"EndTime": "2021-10-04t15:30:0000"
+}

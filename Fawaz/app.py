@@ -73,14 +73,11 @@ def main():
     pprint(response['Datapoints']) 
     
     ## Print metric number only
-<<<<<<< HEAD
     datapoint = [x['Maximum'] for x in response['Datapoints']]
     timestamp = [y['Timestamp'] for y in response['Datapoints']]
     df = pd.DataFrame({'timestamp':timestamp, 'datapoint':datapoint})
-=======
     # for item in response['Datapoints']:
     # 	print (item['Maximum'])
->>>>>>> 182e40b1e5d893cfc08351ceeccdcc39d25631a3
     
     df['datapoint']  = [pd.to_numeric(i) for i in df['datapoint']]
     print(df.sort_values(by='datapoint'))
