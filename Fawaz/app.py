@@ -2,6 +2,9 @@ import os
 import json
 import boto3
 from pprint import pprint
+import dateutil.tz
+import dateutil.parser
+from datetime import datetime
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -44,10 +47,16 @@ def main():
     print("HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
     
     ## Print metric number only
-    datapoint = [x['Values'] for x in response['MetricDataResults']]
+    datapoint = [x['Values'] for x in response['MetricDataResults']][0]
     timestamp = [y['Timestamps'] for y in response['MetricDataResults']]
+    timestamp = [z.strftime("%H:%M:%S") for z in timestamp[0]]
+
     print("Timestamp = ")
     print(timestamp)
+
+    print ("times : " , len(timestamp))
+    print ("values : " , len(datapoint))
+
     df = pd.DataFrame({'timestamp':timestamp, 'datapoint':datapoint})
     # for item in response['Datapoints']:
     # 	print (item['Maximum'])
