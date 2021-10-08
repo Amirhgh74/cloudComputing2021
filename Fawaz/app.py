@@ -38,26 +38,24 @@ def main():
     
     # Read 1 Metric and print it
     json_file = json.load(open("fil.json", "r"))
+
+    # pprint(json_file)
+
     response = get_metric_data(json_file)
     pprint(response)
     print("Values =")
-    for item in response['MetricDataResults']:
-        print (item['Values'])
-    
-    print("HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
-    
-    ## Print metric number only
-    datapoint = [x['Values'] for x in response['MetricDataResults']][0]
-    timestamp = [y['Timestamps'] for y in response['MetricDataResults']]
-    timestamp = [z.strftime("%H:%M:%S") for z in timestamp[0]]
 
-    print("Timestamp = ")
-    print(timestamp)
+    size = len (response['MetricDataResults'])
 
-    print ("times : " , len(timestamp))
-    print ("values : " , len(datapoint))
+    for i in range(size):
 
-    plt.plot(timestamp, datapoint)
+        result = response['MetricDataResults'][i]
+
+        datapoint = result['Values'] 
+        timestamp = result['Timestamps']
+        timestamp = [z.strftime("%H:%M:%S") for z in timestamp]
+        plt.plot(timestamp, datapoint)
+        plt.xticks(rotation=90)
 
 
     # df = pd.DataFrame({'timestamp':timestamp, 'datapoint':datapoint})
@@ -67,7 +65,9 @@ def main():
     # df['datapoint']  = [pd.to_numeric(i) for i in df['datapoint']]
     #print(df.sort_values(by='datapoint'))
     # plt.plot(datapoint)
+    plt.savefig('result_multiple.png')
     plt.show()
+    
 
     return 0
 
