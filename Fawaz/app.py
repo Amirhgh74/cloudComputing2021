@@ -2,8 +2,7 @@ import os
 import json
 import boto3
 from pprint import pprint
-from datetime import datetime
-from datetime import timedelta
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -37,7 +36,7 @@ def main():
     # Read 1 Metric and print it
     json_file = json.load(open("fil.json", "r"))
     response = get_metric_data(json_file)
-    ##pprint(response)
+    pprint(response)
     print("Values =")
     for item in response['MetricDataResults']:
         print (item['Values'])
@@ -47,20 +46,16 @@ def main():
     ## Print metric number only
     datapoint = [x['Values'] for x in response['MetricDataResults']]
     timestamp = [y['Timestamps'] for y in response['MetricDataResults']]
+    print("Timestamp = ")
+    print(timestamp)
     df = pd.DataFrame({'timestamp':timestamp, 'datapoint':datapoint})
     # for item in response['Datapoints']:
     # 	print (item['Maximum'])
     
     df['datapoint']  = [pd.to_numeric(i) for i in df['datapoint']]
-    print(df.sort_values(by='datapoint'))
+    #print(df.sort_values(by='datapoint'))
     plt.plot(datapoint)
     plt.show()
-    ## Save the Graph 
-    response = client.get_metric_widget_image(MetricWidget=RequestCountPerTarget_json)
-    with open ('ReuqestPer.png', 'wb') as f:
-    	f.write(response["MetricWidgetImage"])
-    
-    
 
     return 0
 
