@@ -8,73 +8,45 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-
-ConsumedLCUs_json = '{\
-    "metrics": [\
-        [ "AWS/ApplicationELB", "ConsumedLCUs", "LoadBalancer", "app/ELB-M4-Cluster/36b97285aae53f1f", { "stat": "Average", "id": "m0" } ]\
-    ],\
-    "legend": {\
-        "position": "bottom"\
-    },\
-    "period": 300,\
-    "view": "timeSeries",\
-    "stacked": false,\
-    "title": "All resources - ConsumedLCUs",\
-    "region": "us-east-1"\
-}'
-RequestCountPerTarget_json = '{\
-    "metrics": [\
-        [ "AWS/ApplicationELB", "RequestCountPerTarget", "LoadBalancer", "app/ELB-M4-Cluster/36b97285aae53f1f",  "TargetGroup" , "targetgroup/M4-Cluster/144c46b0855b89d3" ,{ "stat": "Sum", "id": "m0" } ]\
-    ],\
-    "legend": {\
-        "position": "bottom"\
-    },\
-    "period": 300,\
-    "view": "timeSeries",\
-    "stacked": false,\
-    "title": "M4-Cluster - RequestCountPerTarget",\
-    "region": "us-east-1"\
-}'
-
 def initialize_client():
     client = boto3.client(
         'cloudwatch',
         region_name='us-east-1'
     )
-
     return client
 
-##### Request ConsumedLCUs metric
-def request_metric(client):
-    response = client.get_metric_statistics(
-        Namespace='AWS/ApplicationELB',
-        Period=300,
-        StartTime=datetime.utcnow() - timedelta(hours=3),
-        EndTime=datetime.utcnow(),
-        MetricName='ConsumedLCUs',
-        Statistics=['Maximum'],
-        Dimensions=[
-            {
-                'Name': 'LoadBalancer',
-                'Value': 'app/ELB-M4-Cluster/36b97285aae53f1f'
-            }
-            ],
+
+def get_metric_data(configurations):
+
+    # Create CloudWatch client.
+    metric_client = boto3.client("cloudwatch")
+
+    # Make GetMetricData API request.
+    metric_data = metric_client.get_metric_data(
+        **configurations
     )
-
-    return response
-
+    return metric_data
+    
+    
 
 
 
 def main():
     client = initialize_client()
-    response = request_metric(client)
-    ## Print output as log file
-    pprint(response['Datapoints']) 
+    
+    # Read 1 Metric and print it
+    json_file = json.load(open("fil.json", "r"))
+    response = get_metric_data(json_file)
+    ##pprint(response)
+    print("Values =")
+    for item in response['MetricDataResults']:
+        print (item['Values'])
+    
+    print("HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
     
     ## Print metric number only
-    datapoint = [x['Maximum'] for x in response['Datapoints']]
-    timestamp = [y['Timestamp'] for y in response['Datapoints']]
+    datapoint = [x['Values'] for x in response['MetricDataResults']]
+    timestamp = [y['Timestamps'] for y in response['MetricDataResults']]
     df = pd.DataFrame({'timestamp':timestamp, 'datapoint':datapoint})
     # for item in response['Datapoints']:
     # 	print (item['Maximum'])
