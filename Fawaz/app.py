@@ -57,13 +57,16 @@ def main():
     print ("times : " , len(timestamp))
     print ("values : " , len(datapoint))
 
-    df = pd.DataFrame({'timestamp':timestamp, 'datapoint':datapoint})
+    plt.plot(timestamp, datapoint)
+
+
+    # df = pd.DataFrame({'timestamp':timestamp, 'datapoint':datapoint})
     # for item in response['Datapoints']:
     # 	print (item['Maximum'])
     
-    df['datapoint']  = [pd.to_numeric(i) for i in df['datapoint']]
+    # df['datapoint']  = [pd.to_numeric(i) for i in df['datapoint']]
     #print(df.sort_values(by='datapoint'))
-    plt.plot(datapoint)
+    # plt.plot(datapoint)
     plt.show()
 
     return 0
