@@ -8,7 +8,7 @@ from datetime import datetime
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-
+from datetime import datetime, timedelta, timezone
 
 def initialize_client():
     client = boto3.client(
@@ -27,6 +27,8 @@ def get_metric_data(configurations):
 
     # Make GetMetricData API request.
     metric_data = metric_client.get_metric_data(
+        StartTime = (datetime.utcnow() - timedelta(hours=3)),
+        EndTime = datetime.utcnow(),
         **configurations
     )
     return metric_data
