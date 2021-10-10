@@ -5,10 +5,11 @@ from pprint import pprint
 import dateutil.tz
 import dateutil.parser
 from datetime import datetime
-import numpy as np
+from numpy import *
 import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta, timezone
+from matplotlib.ticker import MaxNLocator
 
 def initialize_client():
     client = boto3.client(
@@ -27,8 +28,8 @@ def get_metric_data(configurations):
 
     # Make GetMetricData API request.
     metric_data = metric_client.get_metric_data(
-        StartTime = (datetime.utcnow() - timedelta(hours=3)),
-        EndTime = datetime.utcnow(),
+        StartTime = (datetime.utcnow() - timedelta(days=2)),
+        EndTime = (datetime.utcnow() - timedelta(days=1)),
         **configurations
     )
     return metric_data
@@ -76,18 +77,107 @@ def main():
         temp2 = [z.strftime("%H:%M:%S") for z in (response2['MetricDataResults'][i]['Timestamps'])]  
         metric_timestamp_t2.append(temp2)
     
+    # changes size of the figure itself
+    fig1, ax1 = plt.subplots(2, 2,sharex=False,sharey=False)
+    fig2, ax2 = plt.subplots(2, 2,sharex=False,sharey=False)
+    fig3, ax3 = plt.subplots(2, 2,sharex=False,sharey=False)
+    fig4, ax4 = plt.subplots(2, 2,sharex=False,sharey=False)
+    
 
-    fig, axs = plt.subplots(5, 3)
-    axs = axs.flatten()
-    for i in range(15):
-        axs[i].plot(metric_timestamp_t2[i], metric_data_t2[i], label=metric_id_t2[i])
-        axs[i].plot(metric_timestamp_m4[i], metric_data_m4[i], label=metric_id_m4[i])
+
+
+
+    ax1 = ax1.flatten()
+    ax2 = ax2.flatten()
+    ax3 = ax3.flatten()
+    ax4 = ax4.flatten()
+
+    i = 0
+    while i < 4:
+        ax1[i].scatter(metric_timestamp_t2[i], metric_data_t2[i], label=(str(metric_id_t2[i]) + "_T2"))
+        ax1[i].legend(frameon=True)
+        plt.setp(ax1[i].get_xticklabels(), rotation=90)
+        ax1[i].tick_params(axis="x", labelsize=6)
+        ax1[i].xaxis.set_major_locator(MaxNLocator(nbins=10))
+
+        ax1[i].scatter(metric_timestamp_m4[i], metric_data_m4[i], label=(str(metric_id_m4[i]) + "_M4"))
+        ax1[i].legend(frameon=True)
+        plt.setp(ax1[i].get_xticklabels(), rotation=90)
+        ax1[i].tick_params(axis="x", labelsize=6)
+        ax1[i].xaxis.set_major_locator(MaxNLocator(nbins=10))
+
+
+
+        i += 1
+    
+    while 4 <= i < 8:
+        j = i - 4
+        ax2[j].scatter(metric_timestamp_t2[i], metric_data_t2[i], label=(str(metric_id_t2[i]) + "_T2"), s = 5)
+        ax2[j].legend(frameon=True)
+        plt.setp(ax2[j].get_xticklabels(), rotation=90)
+        ax2[j].tick_params(axis="x", labelsize=6)
+        ax2[j].xaxis.set_major_locator(MaxNLocator(nbins=10))
+
+        ax2[j].scatter(metric_timestamp_m4[i], metric_data_m4[i], label=(str(metric_id_m4[i]) + "_M2"), s = 5)
+        ax2[j].legend(frameon=True)
+        plt.setp(ax2[j].get_xticklabels(), rotation=90)
+        ax2[j].tick_params(axis="x", labelsize=6)
+        ax2[j].xaxis.set_major_locator(MaxNLocator(nbins=10))
+
+        i += 1
+
+    while 8 <= i < 12:
+        j = i - 8
+        ax3[j].scatter(metric_timestamp_t2[i], metric_data_t2[i], label=(str(metric_id_t2[i]) + "_T2"), s = 5)
+        ax3[j].legend(frameon=True)
+        plt.setp(ax3[j].get_xticklabels(), rotation=90)
+        ax3[j].tick_params(axis="x", labelsize=6)
+        ax3[j].xaxis.set_major_locator(MaxNLocator(nbins=10))
+
+        ax3[j].scatter(metric_timestamp_m4[i], metric_data_m4[i], label=(str(metric_id_m4[i]) + "_M2"), s = 5)
+        ax3[j].legend(frameon=True)
+        plt.setp(ax3[j].get_xticklabels(), rotation=90)
+        ax3[j].tick_params(axis="x", labelsize=6)
+        ax3[j].xaxis.set_major_locator(MaxNLocator(nbins=10))
+
+
+        i += 1
+
+    while 12 <= i < 15:
+        j = i - 12
+        ax4[j].scatter(metric_timestamp_t2[i], metric_data_t2[i], label=(str(metric_id_t2[i]) + "_T2"))
+        ax4[j].legend(frameon=True)
+        plt.setp(ax4[j].get_xticklabels(), rotation=90)
+        ax4[j].tick_params(axis="x", labelsize=6)
+        ax4[j].xaxis.set_major_locator(MaxNLocator(nbins=10))
+
+        ax4[j].scatter(metric_timestamp_m4[i], metric_data_m4[i], label=(str(metric_id_m4[i]) + "_M4"))
+        ax4[j].legend(frameon=True)
+        plt.setp(ax4[j].get_xticklabels(), rotation=90)
+        ax4[j].tick_params(axis="x", labelsize=6)
+        ax4[j].xaxis.set_major_locator(MaxNLocator(nbins=10))
+        
+
+
+        i += 1
+    
+    # change spacing of the subplots
+    large = 22; med = 16; small = 5
+    params = {'axes.titlesize': small,
+        'legend.fontsize': small,
+        'figure.figsize': (20, 14),
+        'axes.labelsize': small,
+        'axes.titlesize': small,
+        'xtick.labelsize': small,
+        'ytick.labelsize': small,
+        'figure.titlesize': small
+        }
+    plt.rcParams.update(params)
+
     plt.show()
     
-    
     return 0
-
-
+    
 
 main()
 
