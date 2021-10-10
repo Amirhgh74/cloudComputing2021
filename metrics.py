@@ -29,7 +29,7 @@ def get_metric_data(configurations):
 
     # Make GetMetricData API request.
     metric_data = metric_client.get_metric_data(
-        StartTime = (datetime.utcnow() - timedelta(hours=1)),
+        StartTime = (datetime.utcnow() - timedelta(minutes=10)),
         EndTime = (datetime.utcnow()),
         **configurations
     )

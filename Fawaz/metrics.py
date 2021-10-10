@@ -1,6 +1,9 @@
 import os
 import json
 import boto3
+import tkinter
+import matplotlib
+
 from pprint import pprint
 import dateutil.tz
 import dateutil.parser
@@ -19,17 +22,15 @@ def initialize_client():
     return client
 
 
-
-
 def get_metric_data(configurations):
 
     # Create CloudWatch client.
-    metric_client = boto3.client("cloudwatch")
+    metric_client = boto3.client("cloudwatch", region_name= 'us-east-1')
 
     # Make GetMetricData API request.
     metric_data = metric_client.get_metric_data(
-        StartTime = (datetime.utcnow() - timedelta(days=2)),
-        EndTime = (datetime.utcnow() - timedelta(days=1)),
+        StartTime = (datetime.utcnow() - timedelta(minutes=10)),
+        EndTime = (datetime.utcnow()),
         **configurations
     )
     return metric_data
@@ -45,6 +46,8 @@ def main():
     metric_id_t2 = []
     metric_data_t2 = []
     metric_timestamp_t2 = []
+    
+    print("Reading AWS Metrics and Drawing Data")
 
 
     client = initialize_client()
@@ -84,45 +87,6 @@ def main():
     fig4, ax4 = plt.subplots(2, 2,sharex=False,sharey=False)
     
 
-<<<<<<< HEAD
-    # changes size of the figure itself
-    fig, axs = plt.subplots(5, 1 , figsize=(10,10))
-    fig2, ax2 = plt.subplots(5,1)
-    fig3, ax3 = plt.subplots(5,1)
-
-    i = 0
-    axs = axs.flatten()
-    while i < 5:
-        axs[i].plot(metric_timestamp_t2[i], metric_data_t2[i], label=metric_id_t2[i])
-        axs[i].legend(loc='center left', bbox_to_anchor=(1, 0.5))
-
-        axs[i].plot(metric_timestamp_m4[i], metric_data_m4[i], label=metric_id_m4[i])
-        axs[i].legend(loc='center left', bbox_to_anchor=(1, 0.5))
-        i += 1
-
-    while 5 <= i < 10:
-        j = i - 5
-        ax2[j].plot(metric_timestamp_t2[i], metric_data_t2[i], label=metric_id_t2[i])
-        ax2[j].legend(loc='center left', bbox_to_anchor=(1, 0.5))
-        ax2[j].plot(metric_timestamp_m4[i], metric_data_m4[i], label=metric_id_m4[i])
-        ax2[j].legend(loc='center left', bbox_to_anchor=(1, 0.5))
-        i += 1
-
-    while 10 <= i < 15:
-        j = i - 10
-        ax3[j].plot(metric_timestamp_t2[i], metric_data_t2[i], label=metric_id_t2[i])
-        ax3[j].legend(loc='center left', bbox_to_anchor=(1, 0.5))
-        ax3[j].plot(metric_timestamp_m4[i], metric_data_m4[i], label=metric_id_m4[i])
-        ax3[j].legend(loc='center left', bbox_to_anchor=(1, 0.5))
-        i += 1
-
-    # change spacing of the subplots
-    fig.subplots_adjust(wspace=0, hspace=5)
-    plt.show()
-=======
-
-
-
     ax1 = ax1.flatten()
     ax2 = ax2.flatten()
     ax3 = ax3.flatten()
@@ -145,7 +109,7 @@ def main():
 
 
         i += 1
->>>>>>> b42145f74c66d0e32a6b6c555f0fafae706434a6
+
     
     while 4 <= i < 8:
         j = i - 4

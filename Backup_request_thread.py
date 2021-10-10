@@ -8,7 +8,7 @@ import threading
 sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 1) # line buffering to avoid terminal hang
 
 TARGET_T2_URL = "http://107.23.138.136/"
-TARGET_M4_URL = "http://54.243.141.226/"
+TARGET_M4_URL = "http://54.205.175.208/"
 TARGET_ALL_URL = "http://3.212.147.131/"
 
 
@@ -51,7 +51,7 @@ def run_scenario_one(name, url):
 
     print("Initiating 1000 requests to " + name +  " cluster ...")
     print("------------------------------------------------------------\n")
-    send_request_sync(url, 100)
+    send_request_sync(url, 1000)
     print("------------------------------------------------------------\n")
     return
     
@@ -59,14 +59,14 @@ def run_scenario_two(name, url):
 
     print("Initiating 500 requests to "  + name +  " cluster ...")
     print("------------------------------------------------------------\n")
-    send_request_sync(url, 50)
+    send_request_sync(url, 500)
     print("------------------------------------------------------------\n")
     print("\n---Sleeping for one minute ...\n")
     time.sleep(60)
 
     print ("Initiating 1000 requests to " + name +  " cluster ...")
     print("------------------------------------------------------------\n")
-    send_request_sync(url, 100)
+    send_request_sync(url, 1000)
     print("------------------------------------------------------------\n\n")
     return
 
