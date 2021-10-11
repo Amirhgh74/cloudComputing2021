@@ -229,7 +229,7 @@ def main():
         ax5[a].legend(frameon=True)
         plt2.setp(ax5[a].get_xticklabels(), rotation=90)
         ax5[a].tick_params(axis="x", labelsize=6)
-        i += 1
+        a += 1
 
     plt2.show()
 
