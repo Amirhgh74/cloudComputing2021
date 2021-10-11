@@ -7,6 +7,9 @@ ADD request_thread.py /
 ADD metrics.py /
 ADD t2_cluster.json /
 ADD m4_cluster.json /
+ADD ec2_m4.json /
+ADD ec2_t2.json /
+
 RUN pip install requests
 RUN pip install boto3
 RUN pip install python-dateutil
