@@ -50,7 +50,7 @@ def run_scenario(name):
 def run_scenario_one(name, url):
     print("Initiating 1000 requests to " + name + " cluster ...")
     print("------------------------------------------------------------\n")
-    send_request_sync(url, 10)
+    send_request_sync(url, 1000)
     print("------------------------------------------------------------\n")
     return
 
@@ -58,14 +58,14 @@ def run_scenario_one(name, url):
 def run_scenario_two(name, url):
     print("Initiating 500 requests to " + name + " cluster ...")
     print("------------------------------------------------------------\n")
-    send_request_sync(url, 5)
+    send_request_sync(url, 500)
     print("------------------------------------------------------------\n")
     print("\n---Sleeping for one minute ...\n")
-    time.sleep(5)
+    time.sleep(60)
 
     print("Initiating 1000 requests to " + name + " cluster ...")
     print("------------------------------------------------------------\n")
-    send_request_sync(url, 10)
+    send_request_sync(url, 1000)
     print("------------------------------------------------------------\n\n")
     return
 
