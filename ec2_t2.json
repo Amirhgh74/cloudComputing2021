@@ -13,8 +13,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -30,8 +30,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -47,8 +47,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -64,8 +64,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -81,8 +81,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -98,8 +98,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -115,8 +115,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},
@@ -134,8 +134,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -151,8 +151,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -168,8 +168,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -185,8 +185,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -202,8 +202,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},
@@ -220,8 +220,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -237,8 +237,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -254,8 +254,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -271,8 +271,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -288,8 +288,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -305,8 +305,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -322,8 +322,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -339,8 +339,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 	},
 	{
@@ -356,8 +356,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -373,8 +373,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -390,8 +390,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -407,8 +407,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -424,8 +424,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},
@@ -442,8 +442,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -459,8 +459,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 	
 	},{
@@ -476,8 +476,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -493,8 +493,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -510,8 +510,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -527,8 +527,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -544,8 +544,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -561,8 +561,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},
@@ -579,8 +579,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -596,8 +596,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -613,8 +613,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -630,8 +630,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -647,8 +647,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},
@@ -665,8 +665,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},
@@ -683,8 +683,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -700,8 +700,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -717,8 +717,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -734,8 +734,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -751,8 +751,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -768,8 +768,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -785,8 +785,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},
@@ -803,8 +803,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -820,8 +820,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -837,8 +837,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -854,8 +854,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},{
@@ -871,8 +871,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	},
@@ -889,8 +889,8 @@
 				]
 			},
 			"Period": 60,
-			"Stat": "Sum",
-			"Unit": "Count"
+			"Stat": "Average"
+			
 		}
 		
 	}
