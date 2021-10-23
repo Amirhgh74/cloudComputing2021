@@ -3,7 +3,7 @@ RUN apt-get update
 
 RUN pip install --upgrade pip
 
-ADD request_thread.py /
+ADD request_demo.py /
 ADD metrics.py /
 ADD t2_cluster.json /
 ADD m4_cluster.json /
