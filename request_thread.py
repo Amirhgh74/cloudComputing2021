@@ -6,8 +6,8 @@ import threading
 
 sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 1)  # line buffering to avoid terminal hang
 
-TARGET_T2_URL = "http://107.23.138.136/"
-TARGET_M4_URL = "http://54.205.175.208/"
+TARGET_T2_URL = "http://34.203.25.208/"
+TARGET_M4_URL = "http://3.209.122.237/"
 TARGET_ALL_URL = "http://3.212.147.131/"
 
 
