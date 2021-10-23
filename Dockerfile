@@ -5,10 +5,10 @@ RUN pip install --upgrade pip
 
 ADD request_demo.py /
 ADD metrics.py /
-ADD t2_cluster.json /
-ADD m4_cluster.json /
-ADD ec2_m4.json /
-ADD ec2_t2.json /
+ADD ec2_cluster_1.json /
+ADD ec2_cluster_2.json /
+ADD ec2_1.json /
+ADD ec2_2.json /
 
 RUN pip install requests
 RUN pip install boto3

@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 request_thread.py && python3 metrics.py
+python3 request_demo.py && python3 metrics.py
