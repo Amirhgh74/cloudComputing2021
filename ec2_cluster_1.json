@@ -1,0 +1,328 @@
+{
+
+	"MetricDataQueries": [{
+		"Id": "requestCount",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "RequestCount",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					},
+					{
+						"Name": "TargetGroup",
+						"Value": "targetgroup/Grp-1/49ac973633a7699d"
+					},
+					{
+						"Name": "AvailabilityZone",
+						"Value": "us-east-1c"
+					}
+
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "requestCountPerTarget",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "RequestCountPerTarget",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					},
+					{
+						"Name": "TargetGroup",
+						"Value": "targetgroup/Grp-1/49ac973633a7699d"
+					},
+					{
+						"Name": "AvailabilityZone",
+						"Value": "us-east-1c"
+					}
+
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "targetResponseTime",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "TargetResponseTime",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					},
+					{
+						"Name": "TargetGroup",
+						"Value": "targetgroup/Grp-1/49ac973633a7699d"
+					},
+					{
+						"Name": "AvailabilityZone",
+						"Value": "us-east-1c"
+					}
+
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "httpCode_Target_2XX_Count",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "HTTPCode_Target_2XX_Count",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					},
+					{
+						"Name": "TargetGroup",
+						"Value": "targetgroup/Grp-1/49ac973633a7699d"
+					}
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "newConnectionCount",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "NewConnectionCount",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					}
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "activeConnectionCount",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "ActiveConnectionCount",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					}
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "hTTPCode_Target_4XX_Count",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "HTTPCode_Target_4XX_Count",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					},
+					{
+						"Name": "AvailabilityZone",
+						"Value": "us-east-1c"
+					}
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "healthyHostCount",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "HealthyHostCount",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					},
+					{
+						"Name": "TargetGroup",
+						"Value": "targetgroup/Grp-1/49ac973633a7699d"
+					},
+					{
+						"Name": "AvailabilityZone",
+						"Value": "us-east-1c"
+					}
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "unHealthyHostCount",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "UnHealthyHostCount",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					},
+					{
+						"Name": "TargetGroup",
+						"Value": "targetgroup/Grp-1/49ac973633a7699d"
+					},
+					{
+						"Name": "AvailabilityZone",
+						"Value": "us-east-1c"
+					}
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},
+	{
+		"Id": "processedBytes",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "ProcessedBytes",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					}
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "consumedLCUs",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "ConsumedLCUs",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					}
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "hTTPCode_ELB_503_Count",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "HTTPCode_ELB_503_Count",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					},
+					{
+						"Name": "AvailabilityZone",
+						"Value": "us-east-1d"
+					}
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "hTTPCode_ELB_5XX_Count",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "HTTPCode_ELB_5XX_Count",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					},
+					{
+						"Name": "AvailabilityZone",
+						"Value": "us-east-1d"
+					}
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "desyncMitigationMode_NonCompliant_Request_Count",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "DesyncMitigationMode_NonCompliant_Request_Count",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					},
+					{
+						"Name": "AvailabilityZone",
+						"Value": "us-east-1d"
+					}
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	},{
+		"Id": "hTTPCode_ELB_4XX_Count",
+		"MetricStat": {
+			"Metric": {
+				"Namespace": "AWS/ApplicationELB",
+				"MetricName": "HTTPCode_ELB_4XX_Count",
+				"Dimensions": [{
+						"Name": "LoadBalancer",
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+					},
+					{
+						"Name": "AvailabilityZone",
+						"Value": "us-east-1d"
+					}
+				]
+			},
+			"Period": 60,
+			"Stat": "Sum",
+			"Unit": "Count"
+		},
+		"ReturnData": true
+	}
+]
+}
