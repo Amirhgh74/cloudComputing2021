@@ -29,7 +29,7 @@ def get_metric_data(configurations):
 
     # Make GetMetricData API request.
     metric_data = metric_client.get_metric_data(
-        StartTime = (datetime.utcnow() - timedelta(minutes=10)),
+        StartTime = (datetime.utcnow() - timedelta(hours=10)),
         EndTime = (datetime.utcnow()),
         **configurations
     )
@@ -53,7 +53,7 @@ def main():
     client = initialize_client()
     
     # Read 1 Metric and print it
-    json_file1 = json.load(open("ec2_m4.json", "r"))
+    json_file1 = json.load(open("ec2_cluster_1.json", "r"))
 
     # pprint(json_file)
     response1 = get_metric_data(json_file1)
@@ -68,7 +68,7 @@ def main():
 
           
     # Read 1 Metric and print it
-    json_file2 = json.load(open("ec2_t2.json", "r"))
+    json_file2 = json.load(open("ec2_cluster_2.json", "r"))
 
     # pprint(json_file)
 
