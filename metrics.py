@@ -30,7 +30,7 @@ def initialize_client():
 def get_metric_data(configurations):
 
     # Create CloudWatch client.
-    metric_client = boto3.client("cloudwatch", region_name= 'us-east-1',aws_access_key_id="AKIAZ42OTA5Q6MIERX33", aws_secret_access_key="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")
+    metric_client = boto3.client("cloudwatch", region_name= 'us-east-1')
 
     # Make GetMetricData API request.
     metric_data = metric_client.get_metric_data(
