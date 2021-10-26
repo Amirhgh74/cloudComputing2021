@@ -21,7 +21,7 @@
 
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -42,7 +42,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -68,7 +68,7 @@
 
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -93,7 +93,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -110,7 +110,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -127,7 +127,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -152,7 +152,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -177,7 +177,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -202,7 +202,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -219,7 +219,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -236,7 +236,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -257,7 +257,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -278,7 +278,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -299,7 +299,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -320,7 +320,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},

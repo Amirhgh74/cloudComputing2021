@@ -75,7 +75,7 @@ def main():
     response2 = get_metric_data(json_file2)
     size2 = len (response2['MetricDataResults'])
 
-    for i in range(0, size1):
+    for i in range(0, size2):
         metric_id_t2.append(response2['MetricDataResults'][i]['Id'])
         metric_data_t2.append(response2['MetricDataResults'][i]['Values'])
         

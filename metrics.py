@@ -3,14 +3,17 @@ import json
 import boto3
 import tkinter
 import matplotlib
-
 from pprint import pprint
 import dateutil.tz
 import dateutil.parser
 from datetime import datetime
 from numpy import *
 import pandas as pd
+
+
+
 import matplotlib.pyplot as plt
+
 
 
 from datetime import datetime, timedelta, timezone
@@ -27,11 +30,11 @@ def initialize_client():
 def get_metric_data(configurations):
 
     # Create CloudWatch client.
-    metric_client = boto3.client("cloudwatch", region_name= 'us-east-1')
+    metric_client = boto3.client("cloudwatch", region_name= 'us-east-1',aws_access_key_id="AKIAZ42OTA5Q6MIERX33", aws_secret_access_key="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")
 
     # Make GetMetricData API request.
     metric_data = metric_client.get_metric_data(
-        StartTime = (datetime.utcnow() - timedelta(hours = 8)),
+        StartTime = (datetime.utcnow() - timedelta(hours = 10)),
         EndTime = (datetime.utcnow()),
         **configurations
     )
@@ -85,9 +88,10 @@ def main():
     # pprint(json_file)
 
     response2 = get_metric_data(json_file2)
+    
     size2 = len (response2['MetricDataResults'])
 
-    for i in range(0, size1):
+    for i in range(0, size2):
         metric_id_t2_elb.append(response2['MetricDataResults'][i]['Id'])
         metric_data_t2_elb.append(response2['MetricDataResults'][i]['Values'])
         temp2 = [z.strftime("%H:%M:%S") for z in (response2['MetricDataResults'][i]['Timestamps'])]  

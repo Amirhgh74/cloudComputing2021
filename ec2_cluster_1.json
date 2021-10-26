@@ -8,7 +8,7 @@
 				"MetricName": "RequestCount",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					},
 					{
 						"Name": "TargetGroup",
@@ -21,7 +21,7 @@
 
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -34,7 +34,7 @@
 				"MetricName": "RequestCountPerTarget",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					},
 					{
 						"Name": "TargetGroup",
@@ -47,7 +47,7 @@
 
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -60,7 +60,7 @@
 				"MetricName": "TargetResponseTime",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					},
 					{
 						"Name": "TargetGroup",
@@ -73,7 +73,7 @@
 
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -86,7 +86,7 @@
 				"MetricName": "HTTPCode_Target_2XX_Count",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					},
 					{
 						"Name": "TargetGroup",
@@ -94,7 +94,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -107,11 +107,11 @@
 				"MetricName": "NewConnectionCount",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -124,11 +124,11 @@
 				"MetricName": "ActiveConnectionCount",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -141,7 +141,7 @@
 				"MetricName": "HTTPCode_Target_4XX_Count",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					},
 					{
 						"Name": "AvailabilityZone",
@@ -149,7 +149,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -162,7 +162,7 @@
 				"MetricName": "HealthyHostCount",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					},
 					{
 						"Name": "TargetGroup",
@@ -174,7 +174,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -187,7 +187,7 @@
 				"MetricName": "UnHealthyHostCount",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					},
 					{
 						"Name": "TargetGroup",
@@ -199,7 +199,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -213,11 +213,11 @@
 				"MetricName": "ProcessedBytes",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -230,11 +230,11 @@
 				"MetricName": "ConsumedLCUs",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -247,7 +247,7 @@
 				"MetricName": "HTTPCode_ELB_503_Count",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					},
 					{
 						"Name": "AvailabilityZone",
@@ -255,7 +255,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -268,7 +268,7 @@
 				"MetricName": "HTTPCode_ELB_5XX_Count",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					},
 					{
 						"Name": "AvailabilityZone",
@@ -276,7 +276,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -289,7 +289,7 @@
 				"MetricName": "DesyncMitigationMode_NonCompliant_Request_Count",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					},
 					{
 						"Name": "AvailabilityZone",
@@ -297,7 +297,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},
@@ -310,7 +310,7 @@
 				"MetricName": "HTTPCode_ELB_4XX_Count",
 				"Dimensions": [{
 						"Name": "LoadBalancer",
-						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7af"
+						"Value": "app/EC2-ALB-Grp-1/40c951f92df50b7a"
 					},
 					{
 						"Name": "AvailabilityZone",
@@ -318,7 +318,7 @@
 					}
 				]
 			},
-			"Period": 60,
+			"Period":360,
 			"Stat": "Sum",
 			"Unit": "Count"
 		},

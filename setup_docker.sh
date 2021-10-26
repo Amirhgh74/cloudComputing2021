@@ -1,7 +1,6 @@
 #!/bin/bash
 
 sudo docker build -t python_client .
-
 xhost +local:root
 sudo docker run -it \
 		--env="DISPLAY"\

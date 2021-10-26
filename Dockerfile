@@ -18,6 +18,9 @@ RUN pip install numpy
 RUN pip install pandas
 RUN pip install matplotlib
 RUN pip install PyQt5
+RUN pip install tk
+
+
 ADD run.sh /
 RUN chmod +x run.sh
 CMD ["./run.sh"]

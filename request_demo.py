@@ -33,9 +33,10 @@ def run_scenario():
     
     t1 = threading.Thread(target=run_scenario_one, args=("group one", TARGET_T2_URL))
     t1.start()
+    t1.join()
     t2 = threading.Thread(target=run_scenario_two, args=("group two", TARGET_M4_URL))
     t2.start()
-    t1.join()
+
     t2.join()
     
     return
